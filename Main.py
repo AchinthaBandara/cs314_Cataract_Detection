@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-from f1 import crop
+from Crop import crop
 
 cat1 = cv2.imread("Images/eye2.jpg", 0)
 cat2 = cv2.imread("Images/cat2.png", 0)
@@ -15,6 +15,10 @@ cat9 = cv2.imread("Images/cat3.jpg", 0)
 cat10 = cv2.imread("Images/cat5.jpg", 0)
 cat11 = cv2.imread("Images/eye1.jpeg", 0)
 
+healthy1 = cv2.imread("Images/healthyEye.jpg", 0)
+healthy2 = cv2.imread("Images/healthyEye2.jpg", 0)
+healthy3 = cv2.imread("Images/healthyEye3.jpg", 0)
+
 
 def unsharp_masking(img):
     blur = cv2.GaussianBlur(img, (15, 15), 0)
@@ -23,28 +27,17 @@ def unsharp_masking(img):
     return img
 
 
-# for eye2.jpg
-# detected_circles = cv2.HoughCircles(img,
-#                                         cv2.HOUGH_GRADIENT, 1, 1200, param1=50,
-#                                         param2=30, minRadius=30, maxRadius=80)
-
-# for cat2.png
-# detected_circles = cv2.HoughCircles(img,
-#                                     cv2.HOUGH_GRADIENT, 1, 1200, param1=50,
-#                                     param2=30, minRadius=15, maxRadius=24)
-
-# works for eye2.jpg and eye3.jpg
-# detected_circles = cv2.HoughCircles(img,
-#                                         cv2.HOUGH_GRADIENT, 1, 1200, param1=50,
-#                                         param2=30, minRadius=29, maxRadius=80)
 
 
 def circle(img):
+    # img = cv2.Canny(img, 80, 200)
+    # cv2.imshow("aa", img)
+    # cv2.waitKey(0)
     height, width = img.shape
     mask = np.ones((height, width), np.uint8)
     detected_circles = cv2.HoughCircles(img,
-                                        cv2.HOUGH_GRADIENT, 1, 1200, param1=50,
-                                        param2=30, minRadius=15, maxRadius=80)
+                                        cv2.HOUGH_GRADIENT, 1, 10000, param1=100,
+                                        param2=4, minRadius=25, maxRadius=80)
     # Draw circles that are detected.
     if detected_circles is not None:
         # Convert the circle parameters a, b and r to integers.
@@ -57,27 +50,32 @@ def circle(img):
             # cv2.circle(mask, (a, b), 1, (0, 0, 255), -1)
             # img = cv2.multiply(mask,)
 
-    # cv2.imshow("as",mask)
-    # cv2.waitKey(0)
     return mask
 
 
 def adaptive_histogram(img):
-    clahe = cv2.createCLAHE(clipLimit=40)
-    gray_img_clahe = clahe.apply(img)
+    clahe = cv2.createCLAHE(clipLimit=5)
+    gray_img_clahe = cv2.equalizeHist(img)
+    gray_img_clahe = clahe.apply(gray_img_clahe)
     return gray_img_clahe
 
 
-def threshold(img):
-    thresh = cv2.threshold(img, 100, 150, cv2.THRESH_OTSU + cv2.THRESH_BINARY_INV)[1]
+def threshold(img,t):
+    thresh = cv2.threshold(img, t, 255, cv2.THRESH_BINARY)[1]
     return thresh
 
 
 def sharpen(img):
-    gauss = cv2.GaussianBlur(img, (9, 9), 0)
-    sub = cv2.subtract(img, gauss)
-    sharpened = cv2.add(sub, img)
-    return sharpened
+    kernel = np.array([[0, -1, 0],
+                       [-1, 5, -1],
+                       [0, -1, 0]])
+    image_sharp = cv2.filter2D(img, -1, kernel)
+    image_sharp = cv2.filter2D(img, -1, kernel)
+
+    # gauss = cv2.GaussianBlur(img, (9, 9), 0)
+    # sub = cv2.subtract(img, gauss)
+    # sharpened = cv2.add(sub, img)
+    return image_sharp
 
 
 def erosion(img):
@@ -88,19 +86,34 @@ def erosion(img):
     return opening
 
 
-def process(img):
-    img = crop(img)
+def center(imga):
+    img = imga.copy()
+    y,x = img.shape
+    centerX = int(x/2)
+    centerY = int(y/2)
+    cv2.circle(img, (centerX, centerY), 10, (255, 0, 0), -1)
+
+    return img
+
+def detect(img):
+    img = cv2.resize(img, (400, 300))
+    img = cv2.GaussianBlur(img, (3, 3), 0)
+    # img = cv2.medianBlur(img, 3)
     img = sharpen(img)
+    img = crop(img)
+    img = center(img)
+    ave = np.average(img)
+    print(ave)
     adaptive_hist = adaptive_histogram(img)
-    mask = circle(img)
+    thresh = threshold(adaptive_hist,ave)
+    mask = circle(thresh)
     masked = cv2.bitwise_and(mask, adaptive_hist)
-    thresh = threshold(masked)
     # thresh = erosion(thresh)
 
     plt.subplot(221), plt.imshow(img, cmap='gray')
     plt.title("Original"), plt.xticks([]), plt.yticks([])
     plt.subplot(222), plt.imshow(adaptive_hist, cmap='gray')
-    plt.title("Adaptive Hist"), plt.xticks([]), plt.yticks([])
+    plt.title("Enhanced"), plt.xticks([]), plt.yticks([])
     plt.subplot(223), plt.imshow(masked, cmap='gray')
     plt.title("cropped"), plt.xticks([]), plt.yticks([])
     plt.subplot(224), plt.imshow(thresh, cmap='gray')
@@ -109,13 +122,16 @@ def process(img):
 
 
 # process(cat1)
-# process(cat2)
-# process(cat3)
-# process(cat4)
-# process(cat5)
-# process(cat6)
-# process(cat7)
-# process(cat8)
-# process(cat9)
-# process(cat10)
-process(cat11)
+detect(cat2)
+detect(cat3)
+detect(cat4)
+detect(cat5)
+detect(cat6)
+detect(cat7)
+detect(cat8)
+detect(cat9)
+detect(cat10)
+detect(cat11)
+# process(healthy1)
+detect(healthy2)
+# process(healthy3)
