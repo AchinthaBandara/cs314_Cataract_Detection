@@ -15,7 +15,7 @@ def click_and_crop(event, x, y, flags, param):
         cropping = False
         cv2.rectangle(param, refPt[0], refPt[1], (0, 255, 0), 2)
 
-        cv2.imshow("Crop", param)
+        cv2.imshow("Res", param)
 
 
 def find_center(img):
@@ -45,10 +45,9 @@ def crop_center(img):
 
 def crop(image):
     clone = image.copy()
-    cv2.namedWindow("Crop")
-    cv2.setMouseCallback("Crop", click_and_crop, param=image)
+    cv2.setMouseCallback("Res", click_and_crop, param=image)
     while True:
-        cv2.imshow("Crop", image)
+        cv2.imshow("Res", image)
         key = cv2.waitKey(1) & 0xFF
         if key == ord("r"):
             image = clone.copy()
@@ -57,4 +56,6 @@ def crop(image):
 
     if len(refPt) == 2:
         roi = clone[refPt[0][1]:refPt[1][1], refPt[0][0]:refPt[1][0]]
+        roi = cv2.resize(roi, (400, 300))
+
         return roi
