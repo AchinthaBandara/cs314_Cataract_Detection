@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
-from Cataract_Detection import Cropping, Methods
+import Methods
+import Cropping
 
 
 def check_center_cataract(img):
@@ -20,8 +21,7 @@ def detect(img):
     thresh = Methods.threshold(cropped)
 
     center_cropped, center_cropped_region = Cropping.crop_center(thresh)
-    cv2.imshow("sa", center_cropped_region)
-    cv2.waitKey(0)
+
     result = check_center_cataract(center_cropped)
 
     return result, enhanced

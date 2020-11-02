@@ -1,8 +1,7 @@
-import numpy as np
 import cv2
 import PySimpleGUI as sg
 
-from Cataract_Detection import cataract_detection as detect
+import cataract_detection as detect
 
 
 def load_image():
@@ -30,8 +29,8 @@ def main():
     sg.theme("DarkBrown1")
 
     image = sg.Image(data=load_initial(), key="-IMAGE-")
-    heading = sg.Text("Cataract Detection", size=(60, 1), justification="center")
-    open_file = sg.Button("Open", key="-OPEN-", size=(10, 1))
+    heading = sg.Text("Cataract Detection", justification="center",font=("default",20))
+    open_file = sg.Button("Load New Image", key="-OPEN-")
     close = sg.Button("Exit", key="-EXIT-", size=(10, 1))
     result = sg.Text("", key="-RESULT-", size=(60, 1), justification="left")
 

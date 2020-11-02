@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c850da-9c2e-4724-9c48-dc7d95e95854" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cataract_Detection/Methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cataract_Detection/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/cat5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/eye7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/healthyEye.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/healthyEye2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/healthyEye3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/myForm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/default.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cataract_Detection/GUI.py" />
+      <option name="SCRIPT_NAME" value="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\GUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,7 +97,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" />
+      <option name="SCRIPT_NAME" value="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\cataract_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />

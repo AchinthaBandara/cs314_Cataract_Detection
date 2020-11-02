@@ -1,5 +1,5 @@
 import cv2
-from Cataract_Detection import Methods
+import Methods
 
 refPt = []
 cropping = False
@@ -50,4 +50,5 @@ def crop(image):
         roi = cv2.resize(roi, (400, 300))
 
         roi = Methods.enhance(roi)
+        cv2.destroyAllWindows()
         return roi
