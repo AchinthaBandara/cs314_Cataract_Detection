@@ -5,7 +5,11 @@ import cataract_detection as detect
 
 
 def load_image():
+
     file = sg.popup_get_file('Load Image')
+    while file == "":
+        sg.popup_ok("Please Select an Image!!")
+        file = sg.popup_get_file('Load Image')
 
     img = cv2.imread(file, 0)
     return img
@@ -21,8 +25,10 @@ def load_initial():
 def show_result(result, window):
     if result == "CATARACT":
         window["-RESULT-"].update(result, text_color="#ff0000")
-    else:
+    elif result == "HEALTHY":
         window["-RESULT-"].update(result, text_color="#00ff00")
+    elif result == "SUSPECTED":
+        window["-RESULT-"].update(result, text_color="#ff8c00")
 
 
 def main():
@@ -41,7 +47,7 @@ def main():
         [result]
     ]
 
-    window = sg.Window("Cataract Detection", layout, location=(800, 400))
+    window = sg.Window("Cataract Detection", layout)
     while True:
         event, values = window.read()
         if event == "-EXIT-" or event == sg.WIN_CLOSED:

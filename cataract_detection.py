@@ -4,13 +4,25 @@ import Methods
 import Cropping
 
 
-def check_center_cataract(img):
-    average = np.average(img)
-    print(average)
-    if average < 100:
-        return "HEALTHY"
-    else:
+def check_center_cataract(imgs):
+    count = 0
+    for img in imgs:
+        average = np.average(img)
+        if average < 100:
+            print("OK",average)
+        else:
+            print("ALERT",average)
+            count = count + 1
+
+    print("Count:",count)
+    if count > 3:
         return "CATARACT"
+    elif count == 3:
+        return "SUSPECTED"
+    else:
+        return "HEALTHY"
+
+
 
 
 def detect(img):
@@ -24,4 +36,5 @@ def detect(img):
 
     result = check_center_cataract(center_cropped)
 
+    cv2.waitKey(0)
     return result, enhanced
