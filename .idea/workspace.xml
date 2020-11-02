@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c850da-9c2e-4724-9c48-dc7d95e95854" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cataract_Detection/GUI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Methods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cataract_Detection/Methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cataract_detection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cataract_Detection/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cat5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/eye7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/healthyEye.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/healthyEye2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/healthyEye3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Methods.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/myForm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,14 +58,14 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\Cataract_Detection" />
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\Images" />
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
       <recent name="D:\Achi\Uni Notes\3rd Year\CS314\CS314_Project\Images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -66,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.myForm">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS314_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,27 +102,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CS314_Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="cataract_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS314_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,11 +110,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cataract_Detection" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\Cataract_Detection\cataract_detection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,20 +165,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sampleGUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CS314_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sampleGUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Main" />
       <item itemvalue="Python.myForm" />
-      <item itemvalue="Python.cataract_detection" />
       <item itemvalue="Python.GUI" />
       <item itemvalue="Python.form" />
+      <item itemvalue="Python.sampleGUI" />
+      <item itemvalue="Python.cataract_detection" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.myForm" />
         <item itemvalue="Python.GUI" />
-        <item itemvalue="Python.form" />
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python.cataract_detection" />
+        <item itemvalue="Python.myForm" />
+        <item itemvalue="Python.sampleGUI" />
+        <item itemvalue="Python.form" />
       </list>
     </recent_temporary>
   </component>

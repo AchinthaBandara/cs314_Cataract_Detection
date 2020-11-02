@@ -27,3 +27,11 @@ def sharpen(img):
 def gauss_blur(img):
     img = cv2.GaussianBlur(img, (3, 3), 0)
     return img
+
+
+def enhance(img):
+    img = cv2.resize(img, (400, 300))
+    blurred = gauss_blur(img)
+    sharp = sharpen(blurred)
+    adaptive_hist = adaptive_histogram(sharp)
+    return adaptive_hist

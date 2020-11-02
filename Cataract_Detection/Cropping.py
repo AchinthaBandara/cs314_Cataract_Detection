@@ -1,5 +1,5 @@
 import cv2
-import numpy as np
+from Cataract_Detection import Methods
 
 refPt = []
 cropping = False
@@ -15,7 +15,7 @@ def click_and_crop(event, x, y, flags, param):
         cropping = False
         cv2.rectangle(param, refPt[0], refPt[1], (0, 255, 0), 2)
 
-        cv2.imshow("Res", param)
+        cv2.imshow("Crop Image", param)
 
 
 def find_center(img):
@@ -29,25 +29,16 @@ def find_center(img):
     return cropped, img
 
 
-def threshold(img):
-    ave = np.average(img)
-    thresh = cv2.threshold(img, ave, 255, cv2.THRESH_BINARY)[1]
-    return thresh
-
-
 def crop_center(img):
-    # center = threshold(img)
     center = find_center(img)
-    # cropped = cv2.bitwise_and(img, center)
-
     return center
 
 
 def crop(image):
     clone = image.copy()
-    cv2.setMouseCallback("Res", click_and_crop, param=image)
+    cv2.setMouseCallback("Crop Image", click_and_crop, param=image)
     while True:
-        cv2.imshow("Res", image)
+        cv2.imshow("Crop Image", image)
         key = cv2.waitKey(1) & 0xFF
         if key == ord("r"):
             image = clone.copy()
@@ -58,4 +49,5 @@ def crop(image):
         roi = clone[refPt[0][1]:refPt[1][1], refPt[0][0]:refPt[1][0]]
         roi = cv2.resize(roi, (400, 300))
 
+        roi = Methods.enhance(roi)
         return roi
