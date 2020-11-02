@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8c850da-9c2e-4724-9c48-dc7d95e95854" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/Cropping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cataract_Detection/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cataract_Detection/cataract_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/default.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +37,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project" />
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\Cataract_Detection" />
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\Images" />
       <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
       <recent name="D:\Achi\Uni Notes\3rd Year\CS314\CS314_Project\Images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\img-raw" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -63,7 +60,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GUI">
+  <component name="RunManager" selected="Python.GUI (1)">
+    <configuration name="GUI (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CS314_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS314_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,27 +116,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="D:\Achi\Uni Notes\3rd Year\Semester i\CS314\CS314_Project\cataract_detection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="form" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CS314_Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/form.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,17 +169,17 @@
     <list>
       <item itemvalue="Python.myForm" />
       <item itemvalue="Python.GUI" />
-      <item itemvalue="Python.form" />
       <item itemvalue="Python.sampleGUI" />
       <item itemvalue="Python.cataract_detection" />
+      <item itemvalue="Python.GUI (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI (1)" />
         <item itemvalue="Python.GUI" />
         <item itemvalue="Python.cataract_detection" />
         <item itemvalue="Python.myForm" />
         <item itemvalue="Python.sampleGUI" />
-        <item itemvalue="Python.form" />
       </list>
     </recent_temporary>
   </component>

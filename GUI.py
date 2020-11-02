@@ -12,7 +12,7 @@ def load_image():
 
 
 def load_initial():
-    img = cv2.imread("../Images/default.png")
+    img = cv2.imread("Images/default.png")
     img = cv2.resize(img, (400, 300))
     img = cv2.imencode(".png", img)[1].tobytes()
     return img
