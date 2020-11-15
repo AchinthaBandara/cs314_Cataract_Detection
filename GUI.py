@@ -12,6 +12,7 @@ def load_image():
         file = sg.popup_get_file('Load Image')
 
     img = cv2.imread(file, 0)
+    img = cv2.resize(img, (400, 300))
     return img
 
 
@@ -37,13 +38,16 @@ def main():
     image = sg.Image(data=load_initial(), key="-IMAGE-")
     heading = sg.Text("Cataract Detection", justification="center",font=("default",20))
     open_file = sg.Button("Load New Image", key="-OPEN-")
+    manual_detect = sg.Button("Manual Detect", key="-MANUAL-")
+    auto_detect = sg.Button("Auto Detect", key="-AUTO-")
+
     close = sg.Button("Exit", key="-EXIT-", size=(10, 1))
     result = sg.Text("", key="-RESULT-", size=(60, 1), justification="left")
 
     layout = [
         [heading],
         [image],
-        [open_file, close],
+        [open_file,manual_detect,auto_detect, close],
         [result]
     ]
 
@@ -54,10 +58,19 @@ def main():
             break
         elif event == "-OPEN-":
             img = load_image()
-            result, img_a = detect.detect(img)
+            img_a = cv2.imencode(".png", img)[1].tobytes()
+            window["-IMAGE-"].update(data=img_a)
+        elif event == "-AUTO-":
+            result, img_a = detect.auto_detect(img)
             img_a = cv2.imencode(".png", img_a)[1].tobytes()
             window["-IMAGE-"].update(data=img_a)
             show_result(result, window)
+        elif event == "-MANUAL-":
+            result, img_a = detect.manual_detect(img)
+            img_a = cv2.imencode(".png", img_a)[1].tobytes()
+            window["-IMAGE-"].update(data=img_a)
+            show_result(result, window)
+
     window.close()
 
 
